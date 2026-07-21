@@ -269,12 +269,15 @@
 
 <script>
 /* ==================================================================
-   CONFIGURATION — saisie via le panneau ⚙ dans l'interface,
-   stockée dans le navigateur (localStorage). Rien n'est codé en dur.
+   CONFIGURATION — URLs par défaut du workflow n8n. Modifiable ensuite
+   via le panneau ⚙ si besoin (l'override est stocké dans le navigateur).
    ================================================================== */
+const DEFAULT_LIST_URL = "https://omecare.app.n8n.cloud/webhook/reception-colis";
+const DEFAULT_UPDATE_URL = "https://omecare.app.n8n.cloud/webhook/reception-colis";
+
 const CONFIG = {
-  LIST_URL: localStorage.getItem('reception_list_url') || "",
-  UPDATE_URL: localStorage.getItem('reception_update_url') || ""
+  LIST_URL: localStorage.getItem('reception_list_url') || DEFAULT_LIST_URL,
+  UPDATE_URL: localStorage.getItem('reception_update_url') || DEFAULT_UPDATE_URL
 };
 /* ================================================================== */
 
